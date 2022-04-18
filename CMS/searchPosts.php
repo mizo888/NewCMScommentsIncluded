@@ -44,6 +44,8 @@ if(!empty($_POST)){
         }
       }
     
+	$query .= " ORDER BY posts.post_date DESC ";
+	
      $result = $connection->query($query);
      if(mysqli_num_rows($result) == 0) {
         echo "<br>Nothing matching that description was found";
